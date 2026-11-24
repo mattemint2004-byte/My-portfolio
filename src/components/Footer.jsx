@@ -26,7 +26,7 @@ export default function Footer({ personal, experiences }) {
 
         <div className="border-t border-slate-700 pt-8">
           <h3 className="text-xl font-bold text-white mb-6 text-center">Experience Summary</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className={`grid grid-cols-1 ${experiences.length >= 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'} gap-6 text-center`}>
             {experiences.map((item) => {
               const colorClass = titleColors[item.colorTheme] || 'text-blue-400';
               return (

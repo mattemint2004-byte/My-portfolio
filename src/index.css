@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) scale(1) !important;
+}
+
+.animate-pulse-border {
+  animation: pulseBorder 3s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7), 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0), 0 0 40px rgba(139, 92, 246, 0.5);
+  }
+}
+
+.photo-glow {
+  animation: photoGlow 4s ease-in-out infinite;
+}
+
+@keyframes photoGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card.animate-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.language-card.animate-in {
+  animation: slideInUp 0.7s ease-out forwards;
+}
+
+.language-card:hover {
+  transform: translateY(-5px) rotate(2deg);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-5deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08) rotate(2deg);
+  }
+  70% {
+    transform: scale(0.95) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card.animate-in {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.project-card:hover {
+  transform: translateX(10px);
+  box-shadow: -5px 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.typewriter-details.animate-in p {
+  animation: typewriterLine 0.9s ease-out forwards;
+  opacity: 0;
+}
+
+.typewriter-details.animate-in p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.typewriter-details.animate-in p:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.typewriter-details.animate-in p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.typewriter-details.animate-in p:nth-child(4) {
+  animation-delay: 0.55s;
+}
+.typewriter-details.animate-in p:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+@keyframes typewriterLine {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+section {
+  transition: all 0.5s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+  transition: all 0.4s ease;
+}
+
+.experience-item:hover {
+  transform: translateX(8px);
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+}
